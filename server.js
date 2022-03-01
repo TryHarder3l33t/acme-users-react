@@ -16,7 +16,7 @@ app.get("/", (req, res, next) =>
   res.sendFile(path.join(__dirname, "index.html"))
 );
 
-app.get("/", async (req, res, next) => {
+app.get("/api/users", async (req, res, next) => {
   try {
     res.send(
       await User.findAll({
